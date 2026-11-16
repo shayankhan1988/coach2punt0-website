@@ -1,0 +1,54 @@
+{
+  "intro": "We delen onze kennis over (online) radicalisering met scholen, gemeenten, jeugdhulporganisaties en andere professionals. Praktisch, herkenbaar en met ruimte voor jullie eigen vragen.",
+  "aanbod": {
+    "trainingen": {
+      "titel": "Trainingen",
+      "tekst": "Verdiepende bijeenkomsten waarin professionals kennis opbouwen en oefenen met herkenbare situaties."
+    },
+    "workshops": {
+      "titel": "Workshops en lezingen",
+      "tekst": "Compacte sessies over één thema, voor een teamdag, studiemiddag of webinar."
+    },
+    "advies": {
+      "titel": "Advies en casuïstiekbespreking",
+      "tekst": "Meedenken over een concrete situatie of een beleidsvraag."
+    },
+    "maatwerk": {
+      "titel": "Maatwerk",
+      "tekst": "Een aanbod op maat. Vertel ons wat jullie nodig hebben."
+    }
+  },
+  "themas": [
+    {
+      "titel": "Online radicalisering",
+      "tekst": "Hoe het werkt, wie er gevoelig voor is en hoe je het gesprek aangaat."
+    },
+    {
+      "titel": "Extremisme",
+      "tekst": "Achtergronden begrijpen en omgaan met extreme uitingen in klas, team of wijk."
+    },
+    {
+      "titel": "Online beïnvloeding en groepsdruk",
+      "tekst": "Weten wat jongeren online doen en hoe invloed werkt."
+    },
+    {
+      "titel": "Signaleren en professioneel handelen",
+      "tekst": "Zorgsignalen op tijd zien en weten welke stap je zet."
+    },
+    {
+      "titel": "Complexe casuïstiek",
+      "tekst": "Grip krijgen op situaties met veel problemen en veel betrokkenen."
+    },
+    {
+      "titel": "Maatwerk",
+      "tekst": "Een training die past bij jullie organisatie en vraag."
+    }
+  ],
+  "voor_wie": [
+    "Scholen",
+    "Gemeenten",
+    "Jeugdhulporganisaties",
+    "Wijkteams",
+    "Professionals"
+  ]
+}

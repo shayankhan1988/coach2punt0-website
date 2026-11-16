@@ -1,0 +1,240 @@
+# Instellingen voor Pages CMS (https://app.pagescms.org).
+# Elk onderdeel hieronder is een formulier in het CMS. De velden horen bij
+# content/*.json; scripts/build.mjs zet ze bij elke Netlify-build in de HTML.
+
+media:
+  input: site/assets/img
+  output: /assets/img
+  extensions: [jpg, jpeg, png, webp]
+  rename: safe
+
+content:
+  - name: algemeen
+    label: Contact en bereikbaarheid
+    type: file
+    path: content/algemeen.json
+    format: json
+    fields:
+      - name: telefoon
+        label: Telefoonnummer
+        type: string
+        required: true
+        description: Wordt op alle pagina's aangepast, ook in de belknoppen. Bijvoorbeeld 06 21 97 13 29.
+        pattern:
+          regex: "^(\\+31|0031|0)[0-9 \\-]{9,14}$"
+          message: Vul een Nederlands telefoonnummer in, bijvoorbeeld 06 21 97 13 29.
+      - name: email
+        label: E-mailadres voor contact
+        type: string
+        required: true
+        description: Wordt op alle pagina's aangepast.
+        pattern:
+          regex: "^[^\\s@]+@[^\\s@]+\\.[a-zA-Z]{2,}$"
+          message: Vul een geldig e-mailadres in.
+      - name: bereikbaar
+        label: Bereikbaar (contactpagina)
+        type: text
+        description: Elke nieuwe regel komt op een eigen regel op de site.
+      - name: contact_intro
+        label: Introtekst contactpagina
+        type: text
+        required: true
+
+  - name: home
+    label: Homepage
+    type: file
+    path: content/home.json
+    format: json
+    fields:
+      - name: hero
+        label: Bovenaan de pagina
+        type: object
+        fields:
+          - { name: titel, label: Grote titel, type: string, required: true }
+          - { name: intro, label: Introtekst, type: text, required: true }
+          - { name: foto, label: Foto (staand), type: image, required: true, description: "Wordt automatisch bijgesneden tot een staande foto (4 bij 5)." }
+          - { name: foto_alt, label: Omschrijving van de foto, type: string, required: true, description: "Wat staat er op de foto? Voor blinde bezoekers en Google." }
+      - name: kaarten
+        label: Drie blokken onder de introductie
+        type: object
+        fields:
+          - name: begeleiding
+            label: Blok 1 (linkt naar Hulpaanbod)
+            type: object
+            fields:
+              - { name: titel, label: Titel, type: string, required: true }
+              - { name: tekst, label: Tekst, type: text, required: true }
+          - name: trainingen
+            label: Blok 2 (linkt naar Trainingen)
+            type: object
+            fields:
+              - { name: titel, label: Titel, type: string, required: true }
+              - { name: tekst, label: Tekst, type: text, required: true }
+          - name: professionals
+            label: Blok 3 (linkt naar Verwijzers en professionals)
+            type: object
+            fields:
+              - { name: titel, label: Titel, type: string, required: true }
+              - { name: tekst, label: Tekst, type: text, required: true }
+      - name: cijfers
+        label: Cijfers (de balk met bolletjes)
+        type: object
+        list:
+          min: 1
+          max: 6
+          collapsible:
+            collapsed: true
+            summary: "{getal} {tekst}"
+        fields:
+          - { name: getal, label: Vetgedrukt, type: string, required: true }
+          - { name: tekst, label: Tekst eronder, type: string, required: true }
+      - name: luisteren
+        label: Blok "Bij ons begint het met luisteren"
+        type: object
+        fields:
+          - { name: kopje, label: Klein kopje boven de titel, type: string, required: true }
+          - { name: titel, label: Titel, type: string, required: true }
+          - { name: jongere_titel, label: Tussenkop voor jongeren, type: string, required: true }
+          - { name: jongere_tekst, label: Tekst voor jongeren, type: text, required: true }
+          - { name: ouder_titel, label: Tussenkop voor ouders, type: string, required: true }
+          - { name: ouder_tekst, label: Tekst voor ouders, type: text, required: true }
+          - { name: foto, label: Foto (liggend), type: image, required: true, description: "Wordt automatisch bijgesneden tot een liggende foto (4 bij 3)." }
+          - { name: foto_alt, label: Omschrijving van de foto, type: string, required: true }
+      - name: kwaliteit
+        label: Blok kwaliteit (SKJ)
+        type: object
+        fields:
+          - { name: titel, label: Titel, type: string, required: true }
+          - { name: tekst, label: Tekst, type: text, required: true }
+
+  - name: overons
+    label: Over ons
+    type: file
+    path: content/overons.json
+    format: json
+    fields:
+      - { name: intro, label: Introtekst bovenaan, type: text, required: true }
+      - name: waarom
+        label: Waarom Coach 2punt0?
+        type: object
+        fields:
+          - { name: kop, label: Eerste zin (groot), type: text, required: true }
+          - { name: tekst, label: Tekst, type: text, required: true }
+      - name: specialist
+        label: De specialist (Mounir)
+        type: object
+        fields:
+          - { name: foto, label: Foto (vierkant), type: image, required: true, description: "Wordt automatisch vierkant bijgesneden." }
+          - { name: foto_alt, label: Omschrijving van de foto, type: string, required: true }
+          - { name: titel, label: Titel, type: string, required: true }
+          - { name: intro, label: Eerste alinea (groot), type: text, required: true }
+          - { name: tekst, label: Tweede alinea, type: text, required: true }
+          - name: kenmerken
+            label: Labels onder de tekst
+            type: string
+            list: true
+
+  - name: werkenbij
+    label: Werken bij en vacatures
+    type: file
+    path: content/werkenbij.json
+    format: json
+    fields:
+      - { name: intro, label: Introtekst bovenaan, type: text, required: true }
+      - { name: foto, label: Foto bovenaan (liggend), type: image, required: true }
+      - { name: foto_alt, label: Omschrijving van de foto, type: string, required: true }
+      - { name: wie_lead, label: "Wie zoeken we? (eerste zin)", type: text, required: true }
+      - name: wie_eisen
+        label: "Wie zoeken we? (opsomming)"
+        type: string
+        list: true
+      - name: vacatures
+        label: Vacatures
+        description: Laat leeg als er geen vacatures zijn. Dan staat de tekst hieronder op de site.
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{titel}"
+        fields:
+          - { name: titel, label: Functie, type: string, required: true }
+          - { name: uren, label: Uren per week (mag leeg), type: string }
+          - { name: omschrijving, label: Omschrijving, type: text, description: "Laat een witregel tussen alinea's." }
+      - { name: geen_vacatures, label: Tekst als er geen vacatures zijn, type: text, required: true }
+
+  - name: trainingen
+    label: Trainingen
+    type: file
+    path: content/trainingen.json
+    format: json
+    fields:
+      - { name: intro, label: Introtekst bovenaan, type: text, required: true }
+      - name: aanbod
+        label: Wat we aanbieden
+        type: object
+        fields:
+          - name: trainingen
+            label: Trainingen
+            type: object
+            fields:
+              - { name: titel, label: Titel, type: string, required: true }
+              - { name: tekst, label: Tekst, type: text, required: true }
+          - name: workshops
+            label: Workshops en lezingen
+            type: object
+            fields:
+              - { name: titel, label: Titel, type: string, required: true }
+              - { name: tekst, label: Tekst, type: text, required: true }
+          - name: advies
+            label: Advies
+            type: object
+            fields:
+              - { name: titel, label: Titel, type: string, required: true }
+              - { name: tekst, label: Tekst, type: text, required: true }
+          - name: maatwerk
+            label: Maatwerk
+            type: object
+            fields:
+              - { name: titel, label: Titel, type: string, required: true }
+              - { name: tekst, label: Tekst, type: text, required: true }
+      - name: themas
+        label: Thema's
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{titel}"
+        fields:
+          - { name: titel, label: Titel, type: string, required: true }
+          - { name: tekst, label: Tekst, type: text, required: true }
+      - name: voor_wie
+        label: Voor wie
+        type: string
+        list: true
+
+  - name: faq
+    label: Veelgestelde vragen
+    type: file
+    path: content/faq.json
+    format: json
+    fields:
+      - { name: intro, label: Introtekst bovenaan, type: text, required: true }
+      - name: groepen
+        label: Onderwerpen
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{titel}"
+        fields:
+          - { name: titel, label: Onderwerp, type: string, required: true }
+          - name: vragen
+            label: Vragen
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{vraag}"
+            fields:
+              - { name: vraag, label: Vraag, type: string, required: true }
+              - { name: antwoord, label: Antwoord, type: text, required: true, description: "Laat een witregel tussen alinea's." }
