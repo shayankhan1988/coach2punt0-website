@@ -1,0 +1,69 @@
+{
+  "intro": "Antwoorden over online radicalisering, onze hulp, de Ambulante Spoedlijn, aanmelden en privacy.",
+  "groepen": [
+    {
+      "titel": "Over online radicalisering",
+      "vragen": [
+        {
+          "vraag": "Wat is online radicalisering?",
+          "antwoord": "Online radicalisering is een proces waarbij een jongere via internet, sociale media, games of chatgroepen steeds extremere denkbeelden overneemt, vaak met toenemende afkeer van anderen en soms met de bereidheid om geweld goed te keuren of te gebruiken."
+        },
+        {
+          "vraag": "Waar herken ik online radicalisering aan?",
+          "antwoord": "Eén signaal zegt weinig. Let op een combinatie: een plotselinge verandering in taal of uiterlijk, terugtrekken uit oude vriendschappen, veel tijd in één gesloten online groep, sterk wij-tegenover-zij-denken en uitspraken die geweld goedkeuren. Twijfel je, vraag dan advies."
+        },
+        {
+          "vraag": "Wat kan ik als ouder doen bij zorgen?",
+          "antwoord": "Blijf in gesprek, oordeel niet meteen en toon interesse in wat je kind online doet. Neem contact met ons op voor advies of meld aan."
+        }
+      ]
+    },
+    {
+      "titel": "Over Coach 2punt0 en de Ambulante Spoedlijn",
+      "vragen": [
+        {
+          "vraag": "Wat is Coach 2punt0?",
+          "antwoord": "Coach 2punt0 is een aanbieder die gespecialiseerd is in (online) radicalisering van jongeren. We bieden ambulante jeugdhulp aan jongeren en gezinnen, trainingen en workshops aan professionals, advies, en de Ambulante Spoedlijn (ASH): een specialist binnen 3 uur na aanmelding op locatie."
+        },
+        {
+          "vraag": "Wat is de Ambulante Spoedlijn (ASH)?",
+          "antwoord": "De Ambulante Spoedlijn is onze spoedhulp voor situaties rond online radicalisering waarin het niet kan wachten. Na een verklaring met handtekening staat ons ASH-team binnen 3 uur na aanmelding voor de deur."
+        },
+        {
+          "vraag": "Werken jullie met SKJ-geregistreerde professionals?",
+          "antwoord": "Ja. Wij werken met SKJ-geregistreerde professionals. Daarnaast zijn we ISO 9001-gecertificeerd en aangesloten bij BVKZ en BPSW."
+        }
+      ]
+    },
+    {
+      "titel": "Aanmelden en jeugdhulp",
+      "vragen": [
+        {
+          "vraag": "Wat is ambulante jeugdhulp?",
+          "antwoord": "Ambulante jeugdhulp is begeleiding zonder opname. De jongere blijft thuis wonen en de begeleiding vindt plaats in de eigen omgeving: thuis, op school of in de buurt."
+        },
+        {
+          "vraag": "Hoe meld ik een jongere aan?",
+          "antwoord": "Via de pagina Aanmelden. Wij nemen daarna contact met je op."
+        },
+        {
+          "vraag": "Geven jullie trainingen en workshops?",
+          "antwoord": "Ja, aan scholen, gemeenten, jeugdhulporganisaties en andere professionals, over onder meer online radicalisering, extremisme, online beïnvloeding en signaleren."
+        }
+      ]
+    },
+    {
+      "titel": "Privacy en veiligheid",
+      "vragen": [
+        {
+          "vraag": "Wat gebeurt er met de gegevens die ik invul?",
+          "antwoord": "We vragen alleen het hoogstnodige, geen BSN en geen medische gegevens. Documenten uploaden is optioneel. Je gegevens gebruiken we alleen om contact op te nemen en te beoordelen of we passende hulp kunnen bieden. Meer staat in de privacyverklaring."
+        },
+        {
+          "vraag": "Wat doe ik bij een spoedsituatie?",
+          "antwoord": "Gebruik de Ambulante Spoedlijn, via de rode knop bovenaan de site of door te bellen. Na je akkoord met handtekening staat ons ASH-team binnen 3 uur na aanmelding voor de deur. Andere hulplijnen staan op de pagina Hulp bij crisis."
+        }
+      ]
+    }
+  ]
+}

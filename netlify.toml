@@ -1,2 +1,8 @@
+# Netlify bouwt de site bij elke wijziging op GitHub (ook als Mounir iets
+# opslaat in Pages CMS). De teksten komen uit content/, de site uit site/.
 [build]
-  publish = "site"
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"

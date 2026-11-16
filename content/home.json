@@ -1,0 +1,58 @@
+{
+  "hero": {
+    "titel": "Specialistische jeugdhulp bij online en offline radicalisering",
+    "intro": "Coach 2punt0 zet specialistische expertise in waar veiligheid en maatschappelijk belang samenkomen. Met ambulante begeleiding, advies en trainingen ondersteunen we jongeren, gezinnen en professionals. Wanneer zorgen om radicalisering directe aandacht vragen, kan ons Ambulant Spoedhulpteam (ASH) binnen 3 uur na aanmelding op locatie zijn.",
+    "foto": "/assets/img/jongere-pet-1200.webp",
+    "foto_alt": "Een glimlachende jongere met een pet"
+  },
+  "kaarten": {
+    "begeleiding": {
+      "titel": "Begeleiding",
+      "tekst": "Ambulante jeugdhulp voor jongeren en gezinnen, van gewone begeleiding tot specialistische casuïstiek."
+    },
+    "trainingen": {
+      "titel": "Trainingen en advies",
+      "tekst": "Trainingen, workshops en advies voor scholen, gemeenten en jeugdhulporganisaties."
+    },
+    "professionals": {
+      "titel": "Voor professionals",
+      "tekst": "Doelgroep, aanmeldcriteria en werkwijze op één pagina voor verwijzers."
+    }
+  },
+  "cijfers": [
+    {
+      "getal": "Sinds 2015",
+      "tekst": "actief in het jeugddomein"
+    },
+    {
+      "getal": "100+",
+      "tekst": "trajecten"
+    },
+    {
+      "getal": "3 uur",
+      "tekst": "Ambulante Spoedlijn"
+    },
+    {
+      "getal": "Randstad",
+      "tekst": "gehele werkgebied"
+    },
+    {
+      "getal": "SKJ-geregistreerde",
+      "tekst": "jeugdhulp experts"
+    }
+  ],
+  "luisteren": {
+    "foto": "/assets/img/jongeren-samen-1200.webp",
+    "foto_alt": "Jongeren in gesprek aan een tafel buiten",
+    "kopje": "Gewoon in gesprek",
+    "titel": "Bij ons begint het met luisteren",
+    "jongere_titel": "Ben je zelf jongere?",
+    "jongere_tekst": "Je hoeft het niet alleen uit te zoeken. Wat vind jij belangrijk en waar loop je op vast? Daar stellen we samen doelen bij op, in gewone taal.",
+    "ouder_titel": "Ben je ouder of verzorger?",
+    "ouder_tekst": "Jij kent je kind het best. We betrekken je vanaf het begin en houden je op de hoogte, ook als je zorgen hebt over wat je kind online doet."
+  },
+  "kwaliteit": {
+    "titel": "Wij werken met SKJ-geregistreerde professionals",
+    "tekst": "Vakmensen die staan ingeschreven in het kwaliteitsregister voor jeugdprofessionals."
+  }
+}
