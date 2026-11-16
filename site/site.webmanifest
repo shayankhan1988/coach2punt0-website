@@ -1,0 +1,14 @@
+{
+  "name": "Coach 2punt0",
+  "short_name": "Coach 2punt0",
+  "description": "Specialistische jeugdhulp bij (online) radicalisering",
+  "lang": "nl",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#FBF9F6",
+  "theme_color": "#5B4BC4",
+  "icons": [
+    {"src": "/assets/icon-192.png", "sizes": "192x192", "type": "image/png"},
+    {"src": "/assets/logo-512.png", "sizes": "512x512", "type": "image/png"}
+  ]
+}

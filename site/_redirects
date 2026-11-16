@@ -1,0 +1,28 @@
+# Oude domein en www naar coach2punt0.nl
+https://versie2punt0.nl/*      https://coach2punt0.nl/:splat  301!
+http://versie2punt0.nl/*       https://coach2punt0.nl/:splat  301!
+https://www.versie2punt0.nl/*  https://coach2punt0.nl/:splat  301!
+http://www.versie2punt0.nl/*   https://coach2punt0.nl/:splat  301!
+https://www.coach2punt0.nl/*   https://coach2punt0.nl/:splat  301!
+http://www.coach2punt0.nl/*    https://coach2punt0.nl/:splat  301!
+
+# Oude paden
+/jeugdhulp /hulpaanbod/ 301
+/jeugdhulp/* /hulpaanbod/ 301
+/vormen-van-jeugdhulp /hulpaanbod/ 301
+/vormen-van-jeugdhulp/* /hulpaanbod/ 301
+/ash /ambulante-spoedlijn/ 301
+/ash/* /ambulante-spoedlijn/ 301
+/partners /samenwerkingspartners/ 301
+/onze-aanpak /expertise/ 301
+/onze-aanpak/* /expertise/ 301
+/voor-verwijzers /verwijzers-en-professionals/ 301
+/voor-verwijzers/* /verwijzers-en-professionals/ 301
+/verwijzers /verwijzers-en-professionals/ 301
+/vacatures /werken-bij/ 301
+/spoed /ambulante-spoedlijn/ 301
+/faq /veelgestelde-vragen/ 301
+/over /over-ons/ 301
+/training /trainingen/ 301
+/privacyverklaring /privacy/ 301
+/klachten /klachtenregeling/ 301
