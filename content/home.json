@@ -42,17 +42,17 @@
     }
   ],
   "luisteren": {
-    "foto": "/assets/img/jongeren-samen-1200.webp",
-    "foto_alt": "Jongeren in gesprek aan een tafel buiten",
     "kopje": "Gewoon in gesprek",
     "titel": "Bij ons begint het met luisteren",
     "jongere_titel": "Ben je zelf jongere?",
     "jongere_tekst": "Je hoeft het niet alleen uit te zoeken. Wat vind jij belangrijk en waar loop je op vast? Daar stellen we samen doelen bij op, in gewone taal.",
     "ouder_titel": "Ben je ouder of verzorger?",
-    "ouder_tekst": "Jij kent je kind het best. We betrekken je vanaf het begin en houden je op de hoogte, ook als je zorgen hebt over wat je kind online doet."
+    "ouder_tekst": "Jij kent je kind het best. We betrekken je vanaf het begin en houden je op de hoogte, ook als je zorgen hebt over wat je kind online doet.",
+    "foto": "/assets/img/jongeren-samen-1200.webp",
+    "foto_alt": "Jongeren in gesprek aan een tafel buiten"
   },
   "kwaliteit": {
     "titel": "Wij werken met SKJ-geregistreerde professionals",
-    "tekst": "Vakmensen die staan ingeschreven in het kwaliteitsregister voor jeugdprofessionals."
+    "tekst": "Gekwalificeerde jeugd- & gezinsprofessionals die staan ingeschreven in het kwaliteitsregister SKJ."
   }
 }
