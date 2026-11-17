@@ -43,6 +43,7 @@ toestemming van de mensen erop.
 
 | Onderdeel in het CMS | Wat |
 |---|---|
+| Thema (kleuren en achtergrond) | Kleurenset (standaard, warm, fris of rustig), kleurvlekken en figuurtjes op de achtergrond aan of uit |
 | Contact en bereikbaarheid | Telefoonnummer en e-mailadres (op alle pagina's), bereikbaarheid, intro contactpagina |
 | Homepage | Grote titel, introtekst, foto's, de drie blokken, de cijfers, het blok "Bij ons begint het met luisteren" |
 | Over ons | Intro, "Waarom Coach 2punt0?", jouw tekst, foto en labels |
@@ -61,6 +62,13 @@ staat automatisch de tekst "Er staat momenteel niets open…" op de site.
 
 Open **Veelgestelde vragen**, klap het juiste onderwerp open, klik bij **Vragen**
 op **Add an entry**, vul vraag en antwoord in en klik **Save**.
+
+## Het thema veranderen
+
+Ga naar **Thema (kleuren en achtergrond)**. Kies een **Kleurenset** en zet de
+kleurvlekken of figuurtjes op de achtergrond aan of uit. Klik op **Save**. Alle
+kleurensets zijn getest, dus de tekst blijft altijd goed leesbaar, ook in de
+donkere modus. Wil je terug? Kies dan **Standaard** en zet beide vinkjes aan.
 
 ## Iets misgegaan?
 

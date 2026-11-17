@@ -40,6 +40,30 @@ content:
         type: text
         required: true
 
+  - name: thema
+    label: Thema (kleuren en achtergrond)
+    type: file
+    path: content/thema.json
+    format: json
+    fields:
+      - name: kleuren
+        label: Kleurenset
+        type: select
+        required: true
+        description: "Alle sets zijn getest op leesbaarheid, in licht en donker. Logo en knoppen blijven hetzelfde."
+        options:
+          values:
+            - { value: standaard, label: "Standaard (pastel paars, mint en perzik)" }
+            - { value: warm, label: "Warm (zand, perzik en geel)" }
+            - { value: fris, label: "Fris (mint en lichtblauw)" }
+            - { value: rustig, label: "Rustig (wit en zachtgrijs)" }
+      - name: kleurverloop
+        label: Zachte kleurvlekken op de achtergrond
+        type: boolean
+      - name: versiering
+        label: Kleine figuurtjes op de achtergrond (rondjes, plusjes, golfjes)
+        type: boolean
+
   - name: home
     label: Homepage
     type: file

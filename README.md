@@ -9,6 +9,7 @@ worden aangepast via [Pages CMS](https://app.pagescms.org) (zie `HANDLEIDING.md`
 - `content/*.json` bevat de bewerkbare teksten en foto's. Pages CMS past alleen deze
   bestanden aan (plus nieuwe foto's in `site/assets/img/`). Welke velden er in het CMS
   staan, staat in `.pages.yml`.
+- `content/thema.json` kiest een geteste kleurenset (`THEMAS` in `scripts/build.mjs`); de build schrijft dan `assets/theme.css`.
 - `scripts/build.mjs` kopieert `site/` naar `dist/` en vult de teksten uit `content/` in.
   Netlify draait dit bij elke push (`netlify.toml`) en publiceert `dist/`.
 

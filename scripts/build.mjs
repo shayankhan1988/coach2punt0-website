@@ -177,6 +177,41 @@ function phoneVariants(display) {
   return { display: display.trim(), national, intl: '+31' + national.slice(1) };
 }
 
+
+// ---------- thema (kleurenset en achtergrond) ----------
+// Alleen vooraf geteste kleurensets: tekst, links en knoppen houden overal
+// minstens WCAG AA-contrast (4,5:1), in licht en donker. Merkkleuren en logo
+// blijven gelijk. Bij "standaard" met alles aan verandert er niets.
+const THEMAS = {
+  warm: {
+    light: { bg: '#FBF7F1', surface: '#F7EEE6', line: '#EADFD3', 'p-lav': '#FCE6DC', 'p-mint': '#FFF0D4', 'p-peach': '#FFE0D3', 'p-sky': '#F6E6EE', 'p-butter': '#FFF1C9' },
+    dark: { bg: '#1B1520', surface: '#261D2A', line: '#3E3040', 'p-lav': '#3A2730', 'p-mint': '#36301E', 'p-peach': '#40262A', 'p-sky': '#33233A', 'p-butter': '#3A321E' },
+  },
+  fris: {
+    light: { bg: '#F6FBFA', surface: '#E8F4F0', line: '#D4E7E1', 'p-lav': '#E1EFFA', 'p-mint': '#DAF3E9', 'p-peach': '#E5F5EC', 'p-sky': '#DAEEF9', 'p-butter': '#E9F6E1' },
+    dark: { bg: '#0F191C', surface: '#162428', line: '#2A3E42', 'p-lav': '#1C2F47', 'p-mint': '#1B3934', 'p-peach': '#1E3433', 'p-sky': '#1A2E40', 'p-butter': '#253522' },
+  },
+  rustig: {
+    light: { bg: '#FFFFFF', surface: '#F6F5F9', line: '#E6E4EE', 'p-lav': '#F1EFF8', 'p-mint': '#EFF5F2', 'p-peach': '#F8F1EE', 'p-sky': '#EEF3F8', 'p-butter': '#F8F5EA' },
+    dark: { bg: '#141318', surface: '#1D1C23', line: '#33313D', 'p-lav': '#26243A', 'p-mint': '#1F2B28', 'p-peach': '#2D2326', 'p-sky': '#1F2834', 'p-butter': '#2B2920' },
+  },
+};
+function themeCss() {
+  const t = content.thema || {};
+  const naam = String(t.kleuren || 'standaard');
+  if (naam !== 'standaard' && !THEMAS[naam]) fail(`onbekend thema "${naam}"`);
+  const parts = [];
+  if (THEMAS[naam]) {
+    const vars = (o) => Object.entries(o).map(([k, v]) => `--${k}:${v}`).join(';');
+    parts.push(`:root{${vars(THEMAS[naam].light)}}`, `:root[data-theme="dark"]{${vars(THEMAS[naam].dark)}}`);
+  }
+  if (t.kleurverloop === false) parts.push('html{background:var(--bg)}');
+  if (t.versiering === false) parts.push('body::before{display:none}');
+  if (!parts.length) return null;
+  return { css: `/* Gemaakt door scripts/build.mjs uit content/thema.json */\n${parts.join('\n')}\n`, bg: THEMAS[naam]?.light.bg };
+}
+const theme = themeCss();
+
 // ---------- uitvoeren ----------
 fs.rmSync(DIST, { recursive: true, force: true });
 fs.cpSync(SITE, DIST, { recursive: true });
@@ -223,6 +258,10 @@ for (const file of files) {
         return l;
       });
     }
+    if (theme) {
+      html = html.replace('<link rel="stylesheet" href="/assets/styles.css">', '<link rel="stylesheet" href="/assets/styles.css"><link rel="stylesheet" href="/assets/theme.css">');
+      if (theme.bg) html = html.replace('<meta name="theme-color" content="#FBF9F6">', `<meta name="theme-color" content="${theme.bg}">`);
+    }
     if (file.endsWith(path.join('veelgestelde-vragen', 'index.html'))) html = updateFaqJsonLd(html);
   }
 
@@ -234,4 +273,5 @@ for (const file of files) {
   if (html !== orig) fs.writeFileSync(file, html);
 }
 
+if (theme) fs.writeFileSync(path.join(DIST, 'assets/theme.css'), theme.css);
 console.log(`Klaar: ${count} bewerkbare onderdelen ingevuld, ${imageSwaps.length} foto('s) vervangen. Uitvoer in dist/`);
